@@ -9,12 +9,13 @@ table.resizable-table td {
   position: relative;
   transition: border-right-color 0.01s ease;
 }
-table.resizable-table th.resizing,
-table.resizable-table td.resizing {
-  border-right: 1px solid #888 !important;
+table.resizable-table th.column-resizing, table.resizable-table th.column-hover,
+table.resizable-table td.column-resizing,
+table.resizable-table td.column-hover {
+  border-right: 1px solid #999999 !important;
 }
 table.resizable-table th {
-  min-width: 50px;
+  min-width: 16px;
 }
 table.resizable-table th .column-resizer {
   position: absolute;

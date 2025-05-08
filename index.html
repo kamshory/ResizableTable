@@ -5,14 +5,62 @@
   <meta charset="UTF-8">
   <title>Resizable Columns</title>
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/ResizableTable.js"></script>
   <script src="assets/script.js"></script>
 </head>
 
 <body>
+  <p>All columns are resizable except the last column.</p>
+  <table class="resizable-table">
+    <thead>
+      <tr>
+        <th data-resizable="true">Nama</th>
+        <th data-resizable="true">Umur</th>
+        <th>Kota</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ali</td>
+        <td>25</td>
+        <td>Jakarta</td>
+      </tr>
+      <tr>
+        <td>Budi</td>
+        <td>30</td>
+        <td>Bandung</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Only the second column is resizable.</p>
   <table class="resizable-table">
     <thead>
       <tr>
         <th>Nama</th>
+        <th data-resizable="true">Umur</th>
+        <th>Kota</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ali</td>
+        <td>25</td>
+        <td>Jakarta</td>
+      </tr>
+      <tr>
+        <td>Budi</td>
+        <td>30</td>
+        <td>Bandung</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Only the first column is resizable.</p>
+  <table class="resizable-table">
+    <thead>
+      <tr>
+        <th data-resizable="true">Nama</th>
         <th>Umur</th>
         <th>Kota</th>
       </tr>
@@ -30,22 +78,26 @@
       </tr>
     </tbody>
   </table>
-  <p>Ini paragraf</p>
+
+  <p>All columns are resizable except the first and last columns.</p>
   <table class="resizable-table">
     <thead>
       <tr>
-        <th>Nama</th>
-        <th>Umur</th>
+        <th width="16">No</th>
+        <th data-resizable="true">Nama</th>
+        <th data-resizable="true">Umur</th>
         <th>Kota</th>
       </tr>
     </thead>
     <tbody>
       <tr>
+        <td>1</td>
         <td>Ali</td>
         <td>25</td>
         <td>Jakarta</td>
       </tr>
       <tr>
+        <td>2</td>
         <td>Budi</td>
         <td>30</td>
         <td>Bandung</td>

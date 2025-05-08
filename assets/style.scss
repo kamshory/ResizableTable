@@ -12,14 +12,14 @@ table.resizable-table {
         transition: border-right-color 0.01s ease; // Smooth transition for border color changes
 
         // Styles applied when a column is being resized
-        &.resizing {
-            border-right: 1px solid #888 !important; // Highlight the right border during resizing
+        &.column-resizing, &.column-hover {
+            border-right: 1px solid #999999 !important; // Highlight the right border during resizing
         }
     }
 
     // Styles specific to table header cells (th)
     th {
-        min-width: 50px; // Set a minimum width for header cells
+        min-width: 16px; // Set a minimum width for header cells
 
         // Styles for the resizer control added to each header cell
         .column-resizer {
