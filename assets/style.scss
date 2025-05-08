@@ -1,0 +1,37 @@
+// Styles for the resizable table
+table.resizable-table {
+    border-collapse: collapse; // Remove gaps between table borders
+    width: 100%; // Make the table take up the full width of its container
+
+    // Styles for table header (th) and table data (td) cells
+    th,
+    td {
+        border: 1px solid #ccc; // Add a light gray border around cells
+        padding: 8px; // Add padding inside cells
+        position: relative; // Set position to allow absolute positioning of child elements
+        transition: border-right-color 0.01s ease; // Smooth transition for border color changes
+
+        // Styles applied when a column is being resized
+        &.resizing {
+            border-right: 1px solid #888 !important; // Highlight the right border during resizing
+        }
+    }
+
+    // Styles specific to table header cells (th)
+    th {
+        min-width: 50px; // Set a minimum width for header cells
+
+        // Styles for the resizer control added to each header cell
+        .column-resizer {
+            position: absolute; // Position the resizer relative to the header cell
+            right: -3px; // Position the resizer slightly outside the header cell
+            top: 0; // Align the resizer to the top of the cell
+            width: 5px; // Set the width of the resizer
+            height: 100%; // Make the resizer span the full height of the cell
+            cursor: col-resize; // Change the cursor to indicate column resizing
+            user-select: none; // Prevent text selection while resizing
+            z-index: 2; // Ensure the resizer appears above other elements
+            display: block; // Ensure the resizer is visible
+        }
+    }
+}

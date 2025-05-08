@@ -1,0 +1,31 @@
+table.resizable-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table.resizable-table th,
+table.resizable-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  position: relative;
+  transition: border-right-color 0.01s ease;
+}
+table.resizable-table th.resizing,
+table.resizable-table td.resizing {
+  border-right: 1px solid #888 !important;
+}
+table.resizable-table th {
+  min-width: 50px;
+}
+table.resizable-table th .column-resizer {
+  position: absolute;
+  right: -3px;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  cursor: col-resize;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  z-index: 2;
+  display: block;
+}/*# sourceMappingURL=style.css.map */
